@@ -1,0 +1,27 @@
+package com.kg.springxml.controller;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+
+import org.springframework.stereotype.Component;
+
+
+@Scope(value = "application", proxyMode=ScopedProxyMode.TARGET_CLASS)
+@Component
+public class Application {
+	private String application = "writtting ";
+ 
+	public Application() {
+		System.out.println("Create new Age: " + this.application);
+	}
+ 
+	public String getApplication() {
+		return application;
+
+		
+	}
+ 
+	public void setApplication(String application) {
+		this.application = application;
+	}
+}
